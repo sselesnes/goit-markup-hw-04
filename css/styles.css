@@ -343,6 +343,8 @@ section {
   margin-bottom: 0;
 }
 
+/* -----footer----- */
+
 .page-footer-bottom {
   background: #2e2f42;
   font-weight: 400;
@@ -357,10 +359,39 @@ section {
 .footer-text {
   display: flex;
   width: 264px;
-  /* padding-top: 16px; */
 }
 
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
+}
+
+.footer-grid {
+  display: flex;
+}
+
+.footer-grid-cell {
+  margin-right: 120px;
+}
+
+.footer-social-list {
+  display: flex;
+  /* height: 40px; */
+}
+
+.footer-social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0f0;
+  color: #f00;
+  margin-right: 16px;
 }
