@@ -359,7 +359,8 @@ section {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tmct-icon-ellipse {
+.tmct-icon-ellipse,
+.ft-icon-ellipse {
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
@@ -374,12 +375,15 @@ section {
 }
 
 .tmct-icon-ellipse:hover,
-.tmct-icon-ellipse:focus {
+.tmct-icon-ellipse:focus,
+.ft-icon-ellipse:hover,
+.ft-icon-ellipse:focus {
   background-color: #404bbf;
 }
 
-.tmct-icon-svg {
-  background: rgba(77, 90, 229, 1);
+.tmct-icon-svg,
+.ft-icon-svg {
+  background: #4d5ae5;
   fill: #f4f4fd;
 }
 
@@ -463,32 +467,11 @@ section {
 
 .footer-grid-cell {
   margin-right: 120px;
+  display: block;
 }
 
-/* .footer-social-list {
+/* footer trailing icons */
+.ft-icons {
   display: flex;
-} */
-
-.footer-social-list {
-  /* color: #fff; */
-  /* background: #0ff; */
-}
-
-.footer-social-link {
-  /* display: flex; */
-  /* width: 40px;
-  height: 80px; */
-  /* color: #ff0; */
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-social-icon {
-  /* width: 40px;
-  height: 40px; */
-
-  /* border-radius: 50%; */
-  background-color: #4d5ae5;
-  fill: #fff;
-  margin-right: 16px;
+  gap: 16px;
 }
