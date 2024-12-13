@@ -377,15 +377,12 @@ section {
 }
 
 .tmct-icon-ellipse:hover,
-.tmct-icon-ellipse:focus,
-.ft-icon-ellipse:hover,
-.ft-icon-ellipse:focus {
+.tmct-icon-ellipse:focus {
   background-color: #404bbf;
 }
 
 .tmct-icon-svg,
 .ft-icon-svg {
-  background: #4d5ae5;
   fill: #f4f4fd;
 }
 
@@ -510,4 +507,11 @@ section {
 .ft-icons {
   display: flex;
   gap: 16px;
+}
+
+.ft-icon-ellipse:hover {
+  background-color: #31d0aa;
+}
+.ft-icon-ellipse:active {
+  background-color: #31d0aa;
 }
