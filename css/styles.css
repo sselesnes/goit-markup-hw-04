@@ -349,7 +349,8 @@ section {
   margin-bottom: 8px;
 }
 
-.tmct /* team-member-card-trailing */ {
+/* team-member-card-trailing */
+.tmct {
   display: flex;
   justify-content: center;
   flex-direction: row;
