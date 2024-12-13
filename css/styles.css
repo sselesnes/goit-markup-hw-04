@@ -180,6 +180,7 @@ section {
 
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -213,6 +214,7 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-button:hover,
@@ -375,15 +377,12 @@ section {
 }
 
 .tmct-icon-ellipse:hover,
-.tmct-icon-ellipse:focus,
-.ft-icon-ellipse:hover,
-.ft-icon-ellipse:focus {
+.tmct-icon-ellipse:focus {
   background-color: #404bbf;
 }
 
 .tmct-icon-svg,
 .ft-icon-svg {
-  background: #4d5ae5;
   fill: #f4f4fd;
 }
 
@@ -402,11 +401,6 @@ section {
   margin-bottom: 0;
 }
 
-.project-item {
-  width: calc((100% - 48px) / 3);
-  margin-bottom: 48px;
-}
-
 .project-list li:not(:nth-child(3n)) {
   margin-right: 24px;
 }
@@ -419,7 +413,6 @@ section {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
-  /* margin-bottom: 8px; */
 }
 
 .project-name {
@@ -435,9 +428,50 @@ section {
   margin-bottom: 0;
 }
 
+.project-item {
+  width: calc((100% - 48px) / 3);
+  margin-bottom: 48px;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover .project-overlay {
+  transform: translateY(0%);
+}
+
+.project-overlay {
+  background-color: #4d5ae5;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-pic {
+  position: relative;
+  overflow: hidden;
+}
+
 /* -----footer----- */
 
-.page-footer-bottom {
+.page-footer {
   background: #2e2f42;
   font-weight: 400;
   font-size: 16px;
@@ -448,9 +482,20 @@ section {
   padding: 100px 0 100px;
 }
 
+.footer-grid {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-logo-cell {
+  margin-right: 120px;
+}
+
 .footer-text {
   display: flex;
   width: 264px;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 .footer-logo {
@@ -458,17 +503,13 @@ section {
   margin-bottom: 16px;
 }
 
-.footer-grid {
-  display: flex;
-}
-
-.footer-grid-cell {
-  margin-right: 120px;
-  display: block;
-}
-
 /* footer trailing icons */
 .ft-icons {
   display: flex;
   gap: 16px;
+}
+
+.ft-icon-ellipse:hover,
+.ft-icon-ellipse:focus {
+  background-color: #31d0aa;
 }
