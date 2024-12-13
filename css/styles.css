@@ -180,6 +180,7 @@ section {
 
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -213,6 +214,7 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-button:hover,
@@ -455,8 +457,23 @@ section {
   transition: transform 250ms ease-in-out;
 }
 
+.project-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover .project-desc {
+  transform: translateY(0%);
+}
+
 .project-item:hover .project-overlay {
   transform: translateY(0);
+}
+
+.project-pic {
+  position: relative;
+  overflow: hidden;
 }
 
 /* -----footer----- */
