@@ -509,9 +509,7 @@ section {
   gap: 16px;
 }
 
-.ft-icon-ellipse:hover {
-  background-color: #31d0aa;
-}
-.ft-icon-ellipse:active {
+.ft-icon-ellipse:hover,
+.ft-icon-ellipse:focus {
   background-color: #31d0aa;
 }
